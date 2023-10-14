@@ -66,80 +66,48 @@ func IniziArraysShipComp(randomUserNumber int, shipOneCell []int, shipTwoCell []
 }
 
 func StepConverter(step int, seaField [][]string, symbol string) {
-	switch {
-	case step == 1:
-		seaField[0][0] = symbol
-	case step == 2:
-		seaField[0][1] = symbol
-	case step == 3:
-		seaField[0][2] = symbol
-	case step == 4:
-		seaField[0][3] = symbol
-	case step == 5:
-		seaField[0][4] = symbol
-	case step == 6:
-		seaField[0][5] = symbol
-	case step == 7:
-		seaField[1][0] = symbol
-	case step == 8:
-		seaField[1][1] = symbol
-	case step == 9:
-		seaField[1][2] = symbol
-	case step == 10:
-		seaField[1][3] = symbol
-	case step == 11:
-		seaField[1][4] = symbol
-	case step == 12:
-		seaField[1][5] = symbol
-	case step == 13:
-		seaField[2][0] = symbol
-	case step == 14:
-		seaField[2][1] = symbol
-	case step == 15:
-		seaField[2][2] = symbol
-	case step == 16:
-		seaField[2][3] = symbol
-	case step == 17:
-		seaField[2][4] = symbol
-	case step == 18:
-		seaField[2][5] = symbol
-	case step == 19:
-		seaField[3][0] = symbol
-	case step == 20:
-		seaField[3][1] = symbol
-	case step == 21:
-		seaField[3][2] = symbol
-	case step == 22:
-		seaField[3][3] = symbol
-	case step == 23:
-		seaField[3][4] = symbol
-	case step == 24:
-		seaField[3][5] = symbol
-	case step == 25:
-		seaField[4][0] = symbol
-	case step == 26:
-		seaField[4][1] = symbol
-	case step == 27:
-		seaField[4][2] = symbol
-	case step == 28:
-		seaField[4][3] = symbol
-	case step == 29:
-		seaField[4][4] = symbol
-	case step == 30:
-		seaField[4][5] = symbol
-	case step == 31:
-		seaField[5][0] = symbol
-	case step == 32:
-		seaField[5][1] = symbol
-	case step == 33:
-		seaField[5][2] = symbol
-	case step == 34:
-		seaField[5][3] = symbol
-	case step == 35:
-		seaField[5][4] = symbol
-	case step == 36:
-		seaField[5][5] = symbol
+
+	m := map[int][2]int{
+		1:  {0, 0},
+		2:  {0, 1},
+		3:  {0, 2},
+		4:  {0, 3},
+		5:  {0, 4},
+		6:  {0, 5},
+		7:  {1, 0},
+		8:  {1, 1},
+		9:  {1, 2},
+		10: {1, 3},
+		11: {1, 4},
+		12: {1, 5},
+		13: {2, 0},
+		14: {2, 1},
+		15: {2, 2},
+		16: {2, 3},
+		17: {2, 4},
+		18: {2, 5},
+		19: {3, 0},
+		20: {3, 1},
+		21: {3, 2},
+		22: {3, 3},
+		23: {3, 4},
+		24: {3, 5},
+		25: {4, 0},
+		26: {4, 1},
+		27: {4, 2},
+		38: {4, 3},
+		29: {4, 4},
+		30: {4, 5},
+		31: {5, 0},
+		32: {5, 1},
+		33: {5, 2},
+		34: {5, 3},
+		35: {5, 4},
+		36: {5, 5},
 	}
+
+	seaField[m[step][0]][m[step][1]] = symbol
+
 }
 
 func CheckWin(countOfGameWin int, countOfGameLose int) bool {
